@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.mcs.dao.hibernate.HibernateUtil;
+import com.mcs.hibernate.HibernateUtil;
 
 public class PatientManager {
 

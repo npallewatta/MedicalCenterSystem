@@ -1,4 +1,4 @@
-package com.mcs.dao.hibernate;
+package com.mcs.hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

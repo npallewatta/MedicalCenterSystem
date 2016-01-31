@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mcs.controller.FrontController;
 import com.mcs.dao.PatientManager;
 
 import sun.rmi.server.Dispatcher;
@@ -40,13 +41,13 @@ public class MCSServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-		PatientManager patientManager = new PatientManager();
-		patientManager.createFactory();
-		dispatcher.forward(request, response);
 		
+		FrontController frontController = new FrontController();
+		frontController.getController(request, response);
+		
+		String url=(String)request.getAttribute("page");
+		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+		dispatcher.forward(request, response);
 	}
 
 }

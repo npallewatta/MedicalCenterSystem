@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <title>Medical Center System Login</title>
 </head>
 <body>
@@ -13,8 +14,5 @@ username<input type="text" name="username"/><br>
 password<input type="text" name="password"/><br>
 <input type="submit" value="Submit" /><br>
 </form>
-<c:if test="${not empty login}">
-   <p>${login.firstName}<p>
-</c:if>
 </body> 
 </html>

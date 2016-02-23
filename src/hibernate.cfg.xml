@@ -13,7 +13,8 @@
 
    <!-- Assume test is the database name -->
    <property name="hibernate.connection.url">
-      jdbc:mysql://localhost/mcs
+      jdbc:mysql://localhost/mcs?zeroDateTimeBehavior=convertToNull
+      
    </property>
    <property name="hibernate.connection.username">
       root
@@ -23,5 +24,6 @@
    </property>
 
 <mapping class="com.mcs.entity.Login"/>
+<mapping class="com.mcs.entity.PatientDetails"/>
 </session-factory>
 </hibernate-configuration>

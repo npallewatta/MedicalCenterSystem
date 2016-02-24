@@ -22,10 +22,13 @@ public class LoginController {
 		LoginManager loginManager = new LoginManager();
 		login = loginManager.validateLogin(login);
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("login", login);
+		if(login != null){
+			HttpSession session = request.getSession();
+			session.setAttribute("login", login);
 
-		request.setAttribute("page", "WEB-INF/jsp/welcome.jsp");
+			request.setAttribute("page", "WEB-INF/jsp/welcome.jsp");
+		}
+		
 	}
 	
 }

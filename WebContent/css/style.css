@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+
+.left {
+	float: left;
+	display: block;
+	color: #485e0f;
+}
+
+.div {
+	float: right;
+	color: #45263;
+	font-size: 20px;
+}
